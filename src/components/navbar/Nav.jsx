@@ -1,4 +1,7 @@
 // import React from 'react';
+import { NavLink } from 'react-router'
+
+
 
 const Nav = () => {
   return (
@@ -11,15 +14,27 @@ const Nav = () => {
 				</div>
 				<div className="flex-none">
 					<ul className="menu menu-horizontal px-1">
-						<li className="font-bold">
+						<NavLink
+							to="/"
+							className={({ isActive }) =>
+								isActive ? 'text-primary font-bold' : 'font-bold'
+							}>
 							<a>Home</a>
-						</li>
-						<li className="font-bold">
+						</NavLink>
+						<NavLink
+							to="/blogs"
+							className={({ isActive }) =>
+								isActive ? 'text-primary font-bold' : 'font-bold'
+							}>
 							<a>Blogs</a>
-						</li>
-						<li className="font-bold">
-							<a>Bookmarks</a>
-						</li>
+						</NavLink>
+						<NavLink
+							to="/bookmarks"
+							className={({ isActive }) =>
+								isActive ? 'text-primary font-bold' : 'font-bold'
+							}>
+							<a>Bookmars</a>
+						</NavLink>
 
 						<label className="flex cursor-pointer gap-2">
 							<svg
