@@ -9,12 +9,14 @@ import Footer from "../components/footer/Footer";
 
 const MainLayouts = () => {
   return (
-    <div>
-      <Nav/>
-     <Outlet/>
-     <Footer/>
-    </div>
-  );
+		<div>
+			<Nav />
+			<div className="min-h-[calc(100vh-116px)] border border-amber-800 ">
+				<Outlet />
+			</div>
+			<Footer />
+		</div>
+	);
 };
 
 export default MainLayouts;

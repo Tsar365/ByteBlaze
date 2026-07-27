@@ -3,11 +3,13 @@
 import Hero from "../../components/hero/Hero";
 
 // import Nav from "../../components/navbar/Nav";
+import wave from "/images/wave.svg"
 
 const Home = () => {
   return (
-    <div>
+    <div className="relative">
       <Hero/>
+      <img className="absolute bottom-0 w-full" src={wave} alt="" />
     </div>
   );
 };
